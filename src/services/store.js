@@ -29,6 +29,7 @@ if (config.STAGE === 'development') {
     // eslint-disable-next-line no-undef,no-underscore-dangle
     devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
     // TODO: Move to central logging
+    // eslint-disable-next-line no-console
     console.log('react and redux dev-tools is: ON');
   }
 }
