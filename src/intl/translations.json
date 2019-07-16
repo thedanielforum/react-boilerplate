@@ -1,0 +1,13 @@
+{
+  "en": {
+    "// General //": "",
+    "Loading": "Loading...",
+
+    "// Pages //": "",
+    "Pages.Home.Title": "Welcome to react-boilerplate",
+    "Pages.Home.By": "by {who}",
+    "Pages.PageNotFound.404": "404",
+    "Pages.PageNotFound.Title": "Page Not Found",
+    "Pages.PageNotFound.BackHomeLink": "← Back home"
+  }
+}

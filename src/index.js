@@ -1,7 +1,10 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+import 'intl';
+import 'intl/locale-data/jsonp/en';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './application/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
