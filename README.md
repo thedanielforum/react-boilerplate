@@ -1,5 +1,7 @@
 # Please keep in mind that this structure is 	__*highly*__ opinionated!
 
+[![CircleCI](https://circleci.com/gh/thedanielforum/react-boilerplate.svg?style=svg)](https://circleci.com/gh/thedanielforum/react-boilerplate)
+
 This is usally the structure I use for `non server rendered` react applications.
 I have used this structure for over a year in ten's of projects big & small and for me it has been working quite well, so this is why I have decided to publish it in the hopes that I can serve as a good starting point for other people as well.
 
