@@ -1,3 +1,25 @@
+# Please keep in mind that this structure is 	__*highly*__ opinionated!
+
+This is usally the structure I use for `non server rendered` react applications.
+I have used this structure for over a year in ten's of projects big & small and for me it has been working quite well, so this is why I have decided to publish it in the hopes that I can serve as a good starting point for other people as well.
+
+If you have any questions or ideas for improvement please feel free to open a [issue](https://github.com/thedanielforum/react-boilerplate/issues).
+
+### Batteries included 🔋⚡️
+What what is installed and configured already in this boilterplate?
+- [ReactJS](https://github.com/facebook/react) (duh 🤷‍♂️)
+- [Redux](https://github.com/reduxjs/react-redux)
+- [Redux Saga](https://github.com/redux-saga/redux-saga)
+- [Redux Form](https://github.com/erikras/redux-form)
+- [Lodash](https://github.com/lodash/lodash)
+- [React intl](https://github.com/formatjs/react-intl)
+- [React Router DOM](https://github.com/ReactTraining/react-router)
+- [React toastify](https://github.com/fkhadra/react-toastify)
+- [Reactstrap + Bootstrap 4](https://github.com/reactstrap/reactstrap)
+- [Styled components](https://github.com/styled-components/styled-components)
+- [Shortid](https://github.com/dylang/shortid)
+
+---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
