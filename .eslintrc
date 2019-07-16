@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-for": "off",
+    "import/prefer-default-export": "warn",
+    "function-paren-newline": "warn",
+    "react/destructuring-assignment": "warn"
+  },
+  "globals": {
+    "clearTimeout": true,
+    "setTimeout": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeAll": true,
+    "test": true,
+    "jest": true,
+    "document": true
+  }
+}
