@@ -1,0 +1,78 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build-job:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:10.8
+      
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+        
+      # run tests!
+      - run: yarn run lint
+      - run: yarn test
+  
+  #deploy-job-prod:
+  #  docker:
+  #    - image: circleci/node:10.8
+  #  working_directory: ~/repo
+  #  steps:
+  #    - checkout
+  #    # Download and cache dependencies
+  #    - restore_cache:
+  #        keys:
+  #        - v1-dependencies-{{ checksum "package.json" }}
+  #        # fallback to using the latest cache if no exact match is found
+  #        - v1-dependencies-
+  #    - run: yarn install
+  #    - run: sudo apt-get install awscli
+  #    - run: REACT_APP_RELEASE=$CIRCLE_SHA1 yarn build
+  #    - run:
+  #        name: Deploy to S3 if tests pass and branch is prod
+  #        command: aws s3 sync build/ s3://www.example.com --delete --region ap-northeast-1
+  #    - run:
+  #        name: Enable AWS CLI preview features
+  #        command: |
+  #                aws configure set preview.cloudfront true
+  #                aws configure set preview.create-invalidation true
+  #    - run:
+  #        name: Invalidate cloudfront content
+  #        command: |
+  #                timestamp=$(date +%s)
+  #                command=$(printf '{"Paths":{"Quantity":1,"Items":["/*"]},"CallerReference":"circleci-%s"}' $timestamp)
+  #                echo $command > invbatch.json
+  #                aws cloudfront create-invalidation --distribution-id XXXXXXXXXXXXXXX --invalidation-batch file://invbatch.json
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build-job
+      # Automated deployment to AWS S3 and Cloudfront
+      # See: https://medium.com/@thedanielforum/how-to-deploy-an-react-app-with-aws-s3-cloudfront-cdn-b195a4049f0d
+      # - deploy-job-prod:
+      #     requires:
+      #       - build-job
+      #     filters:
+      #       branches:
+      #         only: prod
