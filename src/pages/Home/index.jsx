@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { FormattedMessage } from 'react-intl';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
+import { FormattedMessage } from "react-intl";
+import styled from "styled-components";
 
 const Title = styled.h1`
   text-align: center;
@@ -23,15 +23,11 @@ class Home extends Component {
               <Title>
                 <FormattedMessage id="Pages.Home.Title" />
               </Title>
-              <By
-                href="https://github.com/thedanielforum"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <By href="https://github.com/thedanielforum" target="_blank" rel="noopener noreferrer">
                 <FormattedMessage
                   id="Pages.Home.By"
                   values={{
-                    who: 'thedanielforum',
+                    who: "thedanielforum",
                   }}
                 />
               </By>

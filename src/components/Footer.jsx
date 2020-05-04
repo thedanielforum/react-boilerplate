@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Container } from 'reactstrap';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { Container } from "reactstrap";
+import styled from "styled-components";
 
 // You can remove the code below if you don'w want a "sticky" footer.
 const FooterContainer = styled.footer`
@@ -13,21 +13,18 @@ const FooterContainer = styled.footer`
 `;
 
 class Footer extends Component {
-  getYear = () => (new Date()).getFullYear();
+  getYear = () => new Date().getFullYear();
 
   render() {
     return (
       <FooterContainer>
         <Container>
           <span className="text-muted">
-            Copyright thedanielforum
-            &nbsp;
+            Copyright thedanielforum &nbsp;
             {this.getYear()}
             &nbsp;
           </span>
-          <span className="text-muted float-sm-right">
-            Place footer content here.
-          </span>
+          <span className="text-muted float-sm-right">Place footer content here.</span>
         </Container>
       </FooterContainer>
     );

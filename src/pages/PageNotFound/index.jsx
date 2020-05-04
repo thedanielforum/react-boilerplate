@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Container, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { FormattedMessage } from "react-intl";
+import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Code = styled.h1`
   text-align: center;
@@ -26,10 +26,7 @@ class PageNotFound extends Component {
               <Message>
                 <FormattedMessage id="Pages.PageNotFound.Title" />
               </Message>
-              <Link
-                to="/"
-                className="btn btn-primary btn-sm"
-              >
+              <Link to="/" className="btn btn-primary btn-sm">
                 <FormattedMessage id="Pages.PageNotFound.BackHomeLink" />
               </Link>
             </div>
