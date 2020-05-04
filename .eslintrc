@@ -1,19 +1,16 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
   "plugins": [
     "react",
     "jsx-a11y",
-    "import"
+    "import",
+    "prettier"
   ],
   "rules": {
-    "react/prefer-stateless-function": "off",
-    "react/prop-types": "off",
-    "jsx-a11y/anchor-is-valid": "off",
-    "jsx-a11y/label-has-for": "off",
-    "import/prefer-default-export": "warn",
-    "function-paren-newline": "warn",
-    "react/destructuring-assignment": "warn"
+    "prettier/prettier": "error"
   },
   "globals": {
     "clearTimeout": true,
@@ -24,6 +21,13 @@
     "beforeAll": true,
     "test": true,
     "jest": true,
-    "document": true
+    "context": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true,
+    "cy": true,
+    "Cypress": true,
+    "window": true
   }
 }
